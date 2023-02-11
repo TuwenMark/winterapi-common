@@ -1,14 +1,19 @@
 package com.winter.remotecommon.service;
 
 
-import com.baomidou.mybatisplus.extension.service.IService;
 import com.winter.remotecommon.pojo.User;
 
 /**
- * 用户服务
+ * 公共用户服务
  *
  * @author yupi
  */
-public interface InnerUserService extends IService<User> {
-
+public interface InnerUserService {
+	/**
+	 * 通过accessKey查看用户是否存在
+	 *
+	 * @param accessKey AK
+	 * @return 用户信息
+	 */
+	User getInvoker(String accessKey);
 }
